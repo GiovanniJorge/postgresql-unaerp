@@ -10,6 +10,7 @@ Exercícios em linguagem SQL usados nas aulas da Unaerp — coleção organizada
 
 ## Badges
 ![Licença](https://img.shields.io/github/license/GiovanniJorge/sql-unaerp?style=flat-square)
+![Exercícios](https://img.shields.io/badge/quantidade-10%20exercícios-blue?style=flat-square)
 
 ## Sumário
 - [Visão geral](#visão-geral)
