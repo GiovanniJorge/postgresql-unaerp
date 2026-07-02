@@ -35,12 +35,8 @@ Top-level:
 │   ├── tables-ex1.sql       # Criação básica de tabelas
 │   ├── tables-ex2.sql       # Constraints e chaves (PK, FK, UNIQUE)
 │   └── ...
-├── exercicios-select/       # Filtros e projeções básicas (WHERE, ORDER BY, LIMIT)
-│   ├── select-ex1.sql
-│   └── ...
-├── exercicios-joins/        # Junções relacionais (INNER, LEFT, RIGHT, FULL JOIN)
-├── exercicios-agregacoes/   # Funções de grupo (COUNT, SUM, AVG, GROUP BY, HAVING)
-└── exercicios-geral/        # Casos complexos, subqueries e revisões
+└── exercicios-select/       # Filtros e projeções básicas (WHERE, ORDER BY, LIMIT)
+    └── select-exs.sql
 ```
 
 ### Como se encaixa:
@@ -65,7 +61,7 @@ Top-level:
 mysql -u seu_usuario -p < exercicios-tables/tables-ex1.sql
 
 # Executar consultas em uma base de dados específica
-mysql -u seu_usuario -p seu_banco < exercicios-select/select-ex1.sql
+mysql -u seu_usuario -p seu_banco < exercicios-select/select-exs.sql
 ```
 
 ### Com PostgreSQL
@@ -81,7 +77,7 @@ sqlite3 meu_banco.db < exercicios-tables/tables-ex1.sql
 
 # Modo interativo carregando um script interno
 sqlite3 meu_banco.db
-sqlite> .read exercicios-select/select-ex1.sql
+sqlite> .read exercicios-select/select-exs.sql
 ```
 
 > **Dica de Formatação:** Para manter os padrões acadêmicos e profissionais, todos os códigos sugeridos seguem a convenção de palavras-chave estruturais em caixa alta (`SELECT`, `FROM`, `WHERE`) e nomes de tabelas/colunas em minúsculo usando `snake_case`.
