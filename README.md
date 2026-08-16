@@ -1,4 +1,4 @@
-# SQL - Unaerp
+# PostgreSQL - Unaerp
 
 Exercícios em linguagem SQL usados nas aulas da Unaerp — coleção organizada por tópicos (criação de tabelas, consultas SELECT, JOINs, agregações e exercícios gerais). Ideal para estudantes que querem aprender SQL desde o básico até conceitos mais avançados.
 
