@@ -6,7 +6,7 @@ Exercícios em linguagem SQL usados nas aulas da Unaerp — coleção organizada
 - Exercícios focados em problemas didáticos para aprendizagem de SQL.
 - Estrutura simples por pastas que separa exercícios por tema.
 - Exemplos que usam databases e scripts SQL para criar ambientes de teste.
-- Fácil execução em qualquer Sistema de Gerenciamento de Banco de Dados (SGBD) compatível com SQL padrão.
+- Fácil execução em ambientes PostgreSQL.
 
 ## Badges
 ![Licença](https://img.shields.io/github/license/GiovanniJorge/sql-unaerp?style=flat-square)
@@ -24,7 +24,7 @@ Exercícios em linguagem SQL usados nas aulas da Unaerp — coleção organizada
 ## Visão geral
 Este repositório organiza pequenos programas e scripts em SQL que exemplificam conceitos de linguagem e resolução de problemas. Cada arquivo SQL normalmente resolve um exercício específico e está escrito de forma didática para facilitar o aprendizado prático em disciplinas de banco de dados.
 
-Os exercícios são independentes e podem ser executados em qualquer SGBD que suporte SQL padrão (MySQL, PostgreSQL, SQLite, SQL Server, etc.).
+Os exercícios são independentes e foram desenvolvidos para o SGBD PostgreSQL.
 
 ## Estrutura do repositório
 Top-level:
@@ -42,7 +42,7 @@ Top-level:
 
 ### Como se encaixa:
 - O repositório abriga uma variedade de scripts estruturados criados ao longo do período letivo.
-- Cada arquivo `.sql` funciona como um roteiro de execução autônomo. A dinâmica comum de uso consiste em carregar o script de sua escolha diretamente na CLI ou query tool do seu SGBD de preferência para validar o esquema ou retornar os datasets solicitados.
+- Cada arquivo .sql funciona como um roteiro de execução autônomo. A dinâmica comum de uso consiste em carregar o script de sua escolha diretamente na CLI ou query tool do seu SGBD de preferência para validar o esquema ou retornar os datasets solicitados.
 
 ## Destaques do repositório
 
@@ -56,29 +56,10 @@ Top-level:
 
 ## Como executar
 
-### Com MySQL / MariaDB
-```bash
-# Executar um script DDL de criação
-mysql -u seu_usuario -p < exercicios-tables/tables-ex1.sql
-
-# Executar consultas em uma base de dados específica
-mysql -u seu_usuario -p seu_banco < exercicios-select/select-exs.sql
-```
-
 ### Com PostgreSQL
 ```bash
 # Executar um arquivo de script diretamente via psql
 psql -U seu_usuario -d seu_banco -f exercicios-tables/tables-ex1.sql
-```
-
-### Com SQLite (Ideal para testes rápidos locais)
-```bash
-# Criar ou alimentar um banco em arquivo local instantaneamente
-sqlite3 meu_banco.db < exercicios-tables/tables-ex1.sql
-
-# Modo interativo carregando um script interno
-sqlite3 meu_banco.db
-sqlite> .read exercicios-select/select-exs.sql
 ```
 
 > **Dica de Formatação:** Para manter os padrões acadêmicos e profissionais, todos os códigos sugeridos seguem a convenção de palavras-chave estruturais em caixa alta (`SELECT`, `FROM`, `WHERE`) e nomes de tabelas/colunas em minúsculo usando `snake_case`.
@@ -96,4 +77,4 @@ Este repositório utiliza a licença MIT — consulte o arquivo [LICENSE](LICENS
 
 ## Autor / Contato
 - **Autor:** Giovanni Jorge  
-- **Repositório:** [https://github.com/GiovanniJorge/sql-unaerp](https://github.com/GiovanniJorge/sql-unaerp)
+- **Repositório:** [https://github.com/GiovanniJorge/postgresql-unaerp](https://github.com/GiovanniJorge/postgresql-unaerp)
