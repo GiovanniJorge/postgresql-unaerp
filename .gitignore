@@ -1,0 +1,46 @@
+# ==========================
+# Configurações e Variáveis de Ambiente
+# ==========================
+*.ini
+*.env
+*.config
+*.properties
+secrets/
+config/local/
+
+# ==========================
+# Logs e Arquivos Temporários
+# ==========================
+*.log
+*.trc
+*.trm
+*.tmp
+*.temp
+logs/
+*.swp
+*.swo
+
+# ==========================
+# Backups e Exports do Banco (Data Pump / Expdp)
+# ==========================
+*.dmp
+*.log
+*.bak
+*.bkp
+backup/
+
+# ==========================
+# IDEs e Editores (VS Code, PL/SQL Developer, etc.)
+# ==========================
+.vscode/
+.idea/
+*.suo
+*.user
+*.db
+*.sqlite
+
+# ==========================
+# Arquivos do Sistema Operacional
+# ==========================
+.DS_Store
+Thumbs.db
