@@ -1,80 +1,218 @@
 # PostgreSQL - Unaerp
 
-Exercícios em linguagem SQL usados nas aulas da Unaerp — coleção organizada por tópicos (criação de tabelas, consultas SELECT, JOINs, agregações e exercícios gerais). Ideal para estudantes que querem aprender SQL desde o básico até conceitos mais avançados.
-
-## Conteúdo principal
-- Exercícios focados em problemas didáticos para aprendizagem de SQL.
-- Estrutura simples por pastas que separa exercícios por tema.
-- Exemplos que usam databases e scripts SQL para criar ambientes de teste.
-- Fácil execução em ambientes PostgreSQL.
-
-## Badges
-![Licença](https://img.shields.io/github/license/GiovanniJorge/sql-unaerp?style=flat-square)
-![Exercícios](https://img.shields.io/badge/quantidade-10%20exercícios-blue?style=flat-square)
+<p align="center">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-16%2B-336791?logo=postgresql&logoColor=white" />
+  <img alt="SQL" src="https://img.shields.io/badge/SQL-Exercises-4169E1?logo=postgresql&logoColor=white" />
+  <img alt="status" src="https://img.shields.io/badge/status-ativo-2EA44F" />
+  <img alt="licença" src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue" />
+</p>
 
 ## Sumário
-- [Visão geral](#visão-geral)
-- [Estrutura do repositório](#estrutura-do-repositório)
-- [Destaques do repositório](#destaques-do-repositório)
-- [Como executar](#como-executar)
-- [Contribuindo](#contribuindo)
+
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Arquitetura e Estrutura do Repositório](#arquitetura-e-estrutura-do-repositório)
+- [Como Executar Localmente](#como-executar-localmente)
+- [Uso e Exemplos](#uso-e-exemplos)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Contribuição](#contribuição)
+- [Autor](#autor)
 - [Licença](#licença)
-- [Autor / Contato](#autor--contato)
 
-## Visão geral
-Este repositório organiza pequenos programas e scripts em SQL que exemplificam conceitos de linguagem e resolução de problemas. Cada arquivo SQL normalmente resolve um exercício específico e está escrito de forma didática para facilitar o aprendizado prático em disciplinas de banco de dados.
+## Descrição do Projeto
 
-Os exercícios são independentes e foram desenvolvidos para o SGBD PostgreSQL.
+Este repositório foi pensado para apoiar o estudo de Banco de Dados com PostgreSQL, especialmente em contextos acadêmicos. Ele reúne materiais didáticos em formato de scripts SQL, divididos por assunto, permitindo praticar conceitos de modelagem e consulta de forma organizada e incremental.
 
-## Estrutura do repositório
-Top-level:
+Os arquivos dentro do projeto abordam:
+
+- criação e alteração de estruturas de banco (DDL)
+- definição de chaves primárias e estrangeiras
+- consultas com filtros e ordenação
+- junções entre tabelas
+- uso de agregações e agrupamentos
+- resolução de exercícios práticos com dados relacionais
+
+A proposta principal é permitir que o aluno execute cada script de forma isolada em um banco PostgreSQL, validando o resultado das operações SQL diretamente no ambiente do SGBD.
+
+## Arquitetura e Estrutura do Repositório
+
+A organização do repositório é simples e funcional:
+
 ```text
-├── .gitattributes
-├── LICENSE                  # Licença MIT
-├── README.md                # Este arquivo
-├── exercicios-tables/       # Estruturas DDL (CREATE TABLE, ALTER TABLE, DROP TABLE)
-│   ├── tables-ex1.sql       # Criação básica de tabelas
-│   ├── tables-ex2.sql       # Constraints e chaves (PK, FK, UNIQUE)
-│   └── ...
-└── exercicios-select/       # Filtros e projeções básicas (WHERE, ORDER BY, LIMIT)
-    └── select-exs.sql
+postgresql-unaerp/
+├── LICENSE
+├── README.md
+├── exercicios-select/
+│   └── select-exs.sql
+├── exercicios-tables/
+│   ├── tables-ex1.sql
+│   ├── tables-ex2.sql
+│   ├── tables-ex3.sql
+│   ├── tables-ex4.sql
+│   ├── tables-ex5.sql
+│   ├── tables-ex6.sql
+│   ├── tables-ex7.sql
+│   ├── tables-ex8.sql
+│   ├── tables-ex9.sql
+│   └── tables-ex10.sql
+└── ...
 ```
 
-### Como se encaixa:
-- O repositório abriga uma variedade de scripts estruturados criados ao longo do período letivo.
-- Cada arquivo .sql funciona como um roteiro de execução autônomo. A dinâmica comum de uso consiste em carregar o script de sua escolha diretamente na CLI ou query tool do seu SGBD de preferência para validar o esquema ou retornar os datasets solicitados.
+### Organização por pasta
 
-## Destaques do repositório
+- `exercicios-tables/`: scripts relacionados à criação de tabelas, constraints, chaves primárias/estrangeiras e modelagem inicial.
+- `exercicios-select/`: consultas com `SELECT`, `WHERE`, `ORDER BY`, `JOIN`, filtros e demais operações de leitura de dados.
 
-### Data Definition Language (DDL)
-* **Descrição:** Scripts focados na modelagem física de dados, aplicando restrições de integridade relacional, tipos de dados adequados e criação de relacionamentos fortes.
-* **Conceitos:** `CREATE TABLE`, `FOREIGN KEY`, `NOT NULL`, `CHECK`.
+### Fluxo de dados
 
-### Consultas Complexas & Junções
-* **Descrição:** Exercícios voltados à extração inteligente de dados cruzados de múltiplas entidades, manipulação de filtros agregados e segmentação de relatórios.
-* **Conceitos:** `INNER JOIN`, `LEFT JOIN`, `GROUP BY`, `HAVING`.
+O fluxo do projeto é direto:
 
-## Como executar
+1. O usuário conecta-se a um banco PostgreSQL local.
+2. Executa um arquivo SQL específico usando o comando `psql` ou uma ferramenta de banco.
+3. O script cria tabelas, insere ou consulta dados conforme o exercício.
+4. O resultado é validado no próprio ambiente do PostgreSQL.
 
-### Com PostgreSQL
+Não há camada de aplicação web ou API; o sistema é executado diretamente sobre o banco de dados.
+
+## Como Executar Localmente
+
+### Pré-requisitos
+
+Antes de começar, verifique se você possui:
+
+- PostgreSQL instalado e em execução
+- Cliente `psql` disponível no terminal
+- Git para clonar o repositório
+- Um banco de dados de teste local configurado
+
+### Configuração de ambiente
+
+Este projeto não utiliza um arquivo `.env` obrigatório para execução básica. Em muitos casos, basta configurar um banco local com credenciais simples, como:
+
 ```bash
-# Executar um arquivo de script diretamente via psql
-psql -U seu_usuario -d seu_banco -f exercicios-tables/tables-ex1.sql
+export PGHOST=localhost
+export PGUSER=postgres
+export PGPASSWORD=sua_senha
+export PGDATABASE=unaerp
 ```
 
-> **Dica de Formatação:** Para manter os padrões acadêmicos e profissionais, todos os códigos sugeridos seguem a convenção de palavras-chave estruturais em caixa alta (`SELECT`, `FROM`, `WHERE`) e nomes de tabelas/colunas em minúsculo usando `snake_case`.
+Se você preferir, também pode informar diretamente no comando `psql` os parâmetros de conexão.
 
-## Contribuindo
-Contribuições são bem-vistas! Se você encontrou uma otimização em alguma query de JOIN ou deseja submeter novas listas de exercícios propostas em aula, siga as etapas:
+### Instalação
 
-1. Faça um **Fork** do repositório.
-2. Crie uma branch com nome descritivo: `feature/exercicio-nome` ou `fix/descricao`.
-3. Faça commits atômicos com mensagens claras e objetivas.
-4. Abra um **Pull Request** detalhando as alterações implementadas.
+```bash
+git clone https://github.com/GiovanniJorge/postgresql-unaerp.git
+cd postgresql-unaerp
+```
+
+### Execução
+
+Para executar um exercício de criação de tabelas:
+
+```bash
+psql -h localhost -U postgres -d unaerp -f exercicios-tables/tables-ex1.sql
+```
+
+Para executar um script de consultas:
+
+```bash
+psql -h localhost -U postgres -d unaerp -f exercicios-select/select-exs.sql
+```
+
+> Ajuste o nome do usuário e do banco conforme sua instalação local.
+
+## Uso e Exemplos
+
+### Exemplo 1: Criar estruturas de banco
+
+```sql
+CREATE TABLE tb_departamentos (
+    cod_depto CHAR(2),
+    nm_depto VARCHAR(60),
+    CONSTRAINT pk_tb_depto_cod_depto PRIMARY KEY(cod_depto)
+);
+```
+
+### Exemplo 2: Consultar dados
+
+```sql
+SELECT nome
+FROM tb_funcionarios
+WHERE salario < 2600;
+```
+
+### Exemplo 3: Relacionar tabelas com JOIN
+
+```sql
+SELECT nm_depto
+FROM tb_departamentos
+INNER JOIN tb_funcionarios
+ON tb_departamentos.cod_depto = tb_funcionarios.cod_depto;
+```
+
+Esses exercícios servem para praticar a lógica relacional e os comandos SQL básicos que aparecem em disciplinas de Banco de Dados.
+
+## Troubleshooting / FAQ
+
+### 1) Erro de conexão com PostgreSQL
+
+Verifique se:
+
+- o serviço do PostgreSQL está rodando
+- o nome do banco foi informado corretamente
+- o usuário e senha existem no sistema
+
+Exemplo:
+
+```bash
+psql -h localhost -U postgres -d unaerp
+```
+
+### 2) Script falha por aspas ou caracteres especiais
+
+Alguns arquivos do repositório podem conter aspas tipográficas, como `“` ou `”`, o que pode causar erro de sintaxe em SQL. Use sempre aspas padrões do teclado:
+
+```sql
+WHERE nm_depto = 'Contabilidade'
+```
+
+e não:
+
+```sql
+WHERE nm_depto = “Contabilidade”
+```
+
+### 3) Tabela não existe
+
+Certifique-se de executar primeiro os arquivos de `exercicios-tables` antes dos de `exercicios-select` quando houver dependência entre eles.
+
+### 4) Banco de dados inexistente
+
+Crie o banco antes de executar os scripts:
+
+```bash
+createdb unaerp
+```
+
+ou use um banco já existente e ajuste o comando `psql`.
+
+## Contribuição
+
+Contribuições são bem-vindas. Para colaborar:
+
+1. Faça um fork do projeto.
+2. Crie uma branch com um nome descritivo.
+3. Faça alterações focadas e claras.
+4. Realize commits organizados.
+5. Abra um Pull Request descrevendo o que foi ajustado.
+
+Sugerir melhorias em queries, organizar novos exercícios ou corrigir erros em scripts também é uma excelente forma de participar do repositório.
+
+## Autor
+
+- Nome: Giovanni Jorge
+- GitHub: [@GiovanniJorge](https://github.com/GiovanniJorge)
 
 ## Licença
-Este repositório utiliza a licença MIT — consulte o arquivo [LICENSE](LICENSE) na raiz.
 
-## Autor / Contato
-- **Autor:** Giovanni Jorge  
-- **Repositório:** [https://github.com/GiovanniJorge/postgresql-unaerp](https://github.com/GiovanniJorge/postgresql-unaerp)
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
