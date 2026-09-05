@@ -2,4 +2,4 @@
 * text=auto
 
 # PostgreSQL scripts
-*.sql text eol=lf linguist-language=PLpgSQL
+*.sql text eol=lf linguist-language=SQL
