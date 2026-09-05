@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# PostgreSQL scripts
+*.sql text eol=lf linguist-language=PLpgSQL
