@@ -3,3 +3,4 @@
 
 # PostgreSQL scripts
 *.sql text eol=lf linguist-language=SQL
+*.sql linguist-detectable=true
