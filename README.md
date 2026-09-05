@@ -3,7 +3,7 @@
 <p align="center">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-16%2B-336791?logo=postgresql&logoColor=white" />
   <img alt="SQL" src="https://img.shields.io/badge/SQL-Exercises-4169E1?logo=postgresql&logoColor=white" />
-  <img alt="status" src="https://img.shields.io/badge/status-ativo-2EA44F" />
+  <img alt="status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen" />
   <img alt="licença" src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue" />
 </p>
 
